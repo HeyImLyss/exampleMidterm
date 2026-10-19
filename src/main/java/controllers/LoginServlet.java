@@ -1,6 +1,6 @@
 package controllers;
 
-import org.example.samplehash.entities.UserInfo;
+import org.example.lyssmidtermexample.entities.UserInfo;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;

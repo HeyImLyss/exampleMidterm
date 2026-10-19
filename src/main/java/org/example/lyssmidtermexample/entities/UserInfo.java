@@ -1,4 +1,4 @@
-package org.example.samplehash.entities;
+package org.example.lyssmidtermexample.entities;
 
 import jakarta.persistence.*;
 

@@ -3,7 +3,25 @@
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_2.xsd"
              version="3.2">
-    <persistence-unit name="default">
+    <persistence-unit name="SecureAuthPU">
+        <class>org.example.lyssmidtermexample.entities.UserInfo</class>
+
+        <properties>
+            <!-- Database configuration driver -->
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+<!--            This is the default driver for MySQL. If you're using something else you'll have to change it-->
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/secure_auth_db"/>
+<!--            replace 3306 with whatever port your database is set to. 3306 is just the MySQL default
+                also "secure_auth_db" is just the name of my database. Change it to whatever the name of yours is-->
+            <property name="jakarta.persistence.jdbc.user" value="root"/>
+<!--            Input the username for your database instance here-->
+            <property name="jakarta.persistence.jdbc.password" value="lysspass123"/>
+<!--            Input the password for your database instance here-->
+
+            <!-- Hibernate Configuration -->
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+        </properties>
 
     </persistence-unit>
 </persistence>

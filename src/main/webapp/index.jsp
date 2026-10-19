@@ -11,5 +11,7 @@
 <h2><a href="login.jsp">Proceed to the Login Page!</a></h2>
 <br/>
 <h2><a href="register.jsp">Don't have an account? Proceed to the Register Page!</a></h2>
+<br/>
+<h2><a href="whatever.jsp">Click here to visit the Whatever Page</a></h2>
 </body>
 </html>
