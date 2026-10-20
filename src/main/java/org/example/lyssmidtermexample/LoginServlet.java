@@ -1,4 +1,4 @@
-package controllers;
+package org.example.lyssmidtermexample;
 
 import org.example.lyssmidtermexample.entities.UserInfo;
 import jakarta.persistence.EntityManager;

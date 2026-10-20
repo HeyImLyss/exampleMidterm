@@ -13,16 +13,16 @@ public class UserInfo {
     private String username;
 
     @Column(nullable = false)
-    private String passwordHash;
+    private String password_hash;
 
     @Column(nullable = false)
     private String salt; // Unique random salt for this user
 
     public UserInfo() {}
 
-    public UserInfo(String username, String passwordHash, String salt) {
+    public UserInfo(String username, String password_hash, String salt) {
         this.username = username;
-        this.passwordHash = passwordHash;
+        this.password_hash = password_hash;
         this.salt = salt;
     }
 
@@ -33,8 +33,8 @@ public class UserInfo {
     public String getUsername() { return username; }
     public void setUsername(String username) { this.username = username; }
 
-    public String getPasswordHash() { return passwordHash; }
-    public void setPasswordHash(String passwordHash) { this.passwordHash = passwordHash; }
+    public String getPasswordHash() { return password_hash; }
+    public void setPasswordHash(String password_hash) { this.password_hash = password_hash; }
 
     public String getSalt() { return salt; }
     public void setSalt(String salt) { this.salt = salt; }

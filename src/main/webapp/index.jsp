@@ -13,5 +13,7 @@
 <h2><a href="register.jsp">Don't have an account? Proceed to the Register Page!</a></h2>
 <br/>
 <h2><a href="whatever.jsp">Click here to visit the Whatever Page</a></h2>
+<br/>
+<h2><a href="hello-servlet">Click here to view the default Hello Servlet!</a></h2>
 </body>
 </html>
