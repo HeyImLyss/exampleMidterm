@@ -11,6 +11,7 @@
     <title>Title of the Whatever Page!</title>
 </head>
 <body>
+    <h1>Congratulations on logging in!</h1>
     <p>You can put whatever you want here and just see how it works with a basic JSP project.</p>
 
 </body>

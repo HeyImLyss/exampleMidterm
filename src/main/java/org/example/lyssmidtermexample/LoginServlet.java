@@ -58,6 +58,7 @@ public class LoginServlet extends HttpServlet {
             response.setContentType("text/html");
             if (computedHash.equals(storedHash)) {
                 response.getWriter().println("<h3 style='color:green;'>✅ Success! Correct password. Welcome, " + user.getUsername() + "!</h3>");
+                response.sendRedirect("whatever.jsp");
             } else {
                 response.getWriter().println("<h3 style='color:red;'>❌ Wrong password. Please try again.</h3>");
             }
