@@ -29,6 +29,7 @@ public class LoginServlet extends HttpServlet {
 
         String username = request.getParameter("username");
         String rawPassword = request.getParameter("password");
+        //these pull from the login inputs in login.jsp1
 
         EntityManager em = emf.createEntityManager();
         try {
@@ -59,6 +60,7 @@ public class LoginServlet extends HttpServlet {
             if (computedHash.equals(storedHash)) {
                 response.getWriter().println("<h3 style='color:green;'>✅ Success! Correct password. Welcome, " + user.getUsername() + "!</h3>");
                 response.sendRedirect("whatever.jsp");
+                //On a successful login, you're brought to the whatever JSP. Neat.
             } else {
                 response.getWriter().println("<h3 style='color:red;'>❌ Wrong password. Please try again.</h3>");
             }

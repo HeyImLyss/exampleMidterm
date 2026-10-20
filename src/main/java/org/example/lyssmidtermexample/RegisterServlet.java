@@ -34,12 +34,15 @@ public class RegisterServlet extends HttpServlet {
 
         try {
             // 1. Generate a secure random salt (16 bytes)
+            //I do not have the time nor the bandwidth to explain or memorize this.
+            //Save as code snippet and move along
             SecureRandom random = new SecureRandom();
             byte[] saltBytes = new byte[16];
             random.nextBytes(saltBytes);
             String salt = Base64.getEncoder().encodeToString(saltBytes);
 
             // 2. Combine password + salt and hash using SHA-256
+            //ditto for this part
             String passwordAndSalt = rawPassword + salt;
             MessageDigest md = MessageDigest.getInstance("SHA-256");
             byte[] hashedBytes = md.digest(passwordAndSalt.getBytes("UTF-8"));
@@ -49,6 +52,7 @@ public class RegisterServlet extends HttpServlet {
                 sb.append(String.format("%02x", b));
             }
             String finalHash = sb.toString();
+            //BlahBlahBlah
 
             // 3. Persist to database using JPA
             EntityManager em = emf.createEntityManager();
